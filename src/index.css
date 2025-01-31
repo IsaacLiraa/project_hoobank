@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
 
 :root {
   --black-gradient: linear-gradient(
@@ -18,6 +17,10 @@
   scroll-behavior: smooth;
 }
 
+.bg-primary {
+  background-color: #00040f;
+}
+
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
@@ -28,10 +31,8 @@
     #5ce1e6 71.54%,
     #33bbcf 100%
   );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .bg-blue-gradient {
@@ -64,6 +65,14 @@
   );
 }
 
+.text-dimWhite {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bg-dimBlue {
+  background-color: rgba(9, 151, 124, 0.1);
+}
+
 .bg-gray-gradient {
   background: linear-gradient(
     153.47deg,
@@ -81,28 +90,23 @@
 }
 
 .sidebar {
-  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @-webkit-keyframes slide-top {
   0% {
-    -webkit-transform: translateY(100px);
     transform: translateY(100px);
   }
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
 
 @keyframes slide-top {
   0% {
-    -webkit-transform: translateY(100px);
     transform: translateY(100px);
   }
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
